@@ -10,8 +10,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        val res = 0
-        val num = 1
+        var num = 0
+        num = 1 + 1
     }
 }
