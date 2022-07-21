@@ -12,5 +12,6 @@ class MainActivity : AppCompatActivity() {
 
         var num = 0
         num = 1 + 1
+        println(num)
     }
 }
