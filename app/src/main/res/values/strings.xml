@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Web View App</string>
+    <string-array name="website_list">
+        <item>394276</item>
+        <item>400019</item>
+        <item>310428</item>
+        <item>271008</item>
+        <item>302340</item>
+    </string-array>
 </resources>
