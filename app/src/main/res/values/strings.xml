@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Web View App</string>
     <string-array name="website_list">
-        <item>394276</item>
-        <item>400019</item>
-        <item>310428</item>
-        <item>271008</item>
-        <item>302340</item>
+        <item>CpE Dept. Facebook</item>
+        <item>CpE Council Facebook</item>
+        <item>CpE Council Instagram</item>
+        <item>CpE Council TikTok</item>
+        <item>Apply To USC</item>
     </string-array>
 </resources>

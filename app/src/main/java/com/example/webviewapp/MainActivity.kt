@@ -21,10 +21,9 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             val items: Array<String> = resources.getStringArray(R.array.website_list)
             var checkItem = 0
-            val m1 = MediaPlayer.create(this, R.raw.sound_1)
             AlertDialog.Builder(this)
                 .setIcon(R.drawable.ic_launcher_foreground)
-                .setTitle("Website")
+                .setTitle("USC CpE Dept. Websites")
                 .setSingleChoiceItems(items, checkItem) { dialog, which ->
                     // action code
                     Toast.makeText(this, items[which], Toast.LENGTH_SHORT).show()
@@ -32,26 +31,23 @@ class MainActivity : AppCompatActivity() {
                 }
                 .setPositiveButton("OK") { dialog, which ->
                     // action code for positive response
-                    m1?.start()
                     Toast.makeText(this, which.toString(), Toast.LENGTH_SHORT).show()
 
                     webView = binding.webView
                     webView!!.webViewClient = WebViewClient()
                     when (items[checkItem]) {
-                        "394276" -> webView!!.loadUrl("https://nhentai.to/g/394276")
-                        "400019" -> webView!!.loadUrl("https://nhentai.to/g/400019")
-                        "310428" -> webView!!.loadUrl("https://nhentai.to/g/310428")
-                        "271008" -> webView!!.loadUrl("https://nhentai.to/g/271008")
-                        "302340" -> webView!!.loadUrl("https://nhentai.to/g/302340")
+                        "CpE Dept. Facebook" -> webView!!.loadUrl("https://www.facebook.com/usccpe")
+                        "CpE Council Facebook" -> webView!!.loadUrl("https://www.facebook.com/USCCpECouncil")
+                        "CpE Council Instagram" -> webView!!.loadUrl("https://www.instagram.com/usc.cpec/")
+                        "CpE Council TikTok" -> webView!!.loadUrl("https://www.tiktok.com/@usc.cpec")
+                        "Apply To USC" -> webView!!.loadUrl("https://www.usc.edu.ph/admission/apply-to-usc")
                     }
                     val webSettings =webView!!.settings
                     webSettings.javaScriptEnabled = true
 
                 }
                 .setNegativeButton("CANCEL") { dialog, which ->
-                    // action code for negative response
-                    // m1?.start()
-
+                    Toast.makeText(this, "CANCELLED", Toast.LENGTH_SHORT).show()
                 }
                 .show()
         }
